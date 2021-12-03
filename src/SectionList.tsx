@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
+  Animated,
   View,
-  SectionList as RNSectionList,
   SectionListProps,
   ViewStyle,
   RegisteredStyle,
@@ -60,7 +60,7 @@ export default class SectionList extends React.PureComponent<IProps, IState> {
           }}
         />
 
-        <RNSectionList
+        <Animated.SectionList
           {...this.props}
           sections={prepareSections}
           onViewableItemsChanged={({ viewableItems }) => {

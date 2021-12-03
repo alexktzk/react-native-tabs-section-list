@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  Animated,
   View,
   TouchableOpacity,
   Dimensions,
@@ -110,7 +111,7 @@ export default class TabBar extends React.PureComponent<IProps, any> {
     const { sections, tabBarStyle } = this.props;
 
     return (
-      <View style={[{ width: WindowWidth }, tabBarStyle]}>
+      <Animated.View style={[{ width: WindowWidth }, tabBarStyle]}>
         <ScrollView
           ref={this.scrollView}
           showsHorizontalScrollIndicator={false}
@@ -124,7 +125,7 @@ export default class TabBar extends React.PureComponent<IProps, any> {
             {sections.map(this.renderTab)}
           </View>
         </ScrollView>
-      </View>
+      </Animated.View>
     );
   }
 }
