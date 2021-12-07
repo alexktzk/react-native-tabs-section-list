@@ -51,7 +51,7 @@ export default class SectionList extends React.PureComponent<IProps, IState> {
             const sectionList = this.sectionList.current;
             if (sectionList && sectionList.scrollToLocation) {
               sectionList.scrollToLocation({
-                animated: true,
+                animated: false,
                 itemIndex: 0,
                 viewOffset: scrollToLocationOffset || 0,
                 sectionIndex: index
